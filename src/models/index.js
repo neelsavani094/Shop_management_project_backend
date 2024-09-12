@@ -37,6 +37,17 @@ Object.keys(db).forEach(modelName => {
   }
 });
 
+/// Admin Model
+
+db.Admin.belongsTo(db.SuperAdmin, { foreignKey: 'Created_by' });
+db.SuperAdmin.hasMany(db.Admin, { foreignKey: 'Created_by' });
+
+/// Admin Model
+
+
+db.User.belongsTo(db.Admin, { foreignKey: 'Created_by' });
+db.Admin.hasMany(db.User, { foreignKey: 'Created_by' });
+
 db.sequelize = sequelize;
 db.Sequelize = Sequelize;
 
