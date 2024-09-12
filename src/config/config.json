@@ -1,0 +1,23 @@
+{
+  "development": {
+    "username": "postgres",
+    "password": "Vrutti@123",
+    "database": "shop_managment",
+    "host": "127.0.0.1",
+    "dialect": "postgres"
+  },
+  "test": {
+    "username": "postgres",
+    "password": "Vrutti@123",
+    "database": "shop_managment",
+    "host": "127.0.0.1",
+    "dialect": "postgres"
+  },
+  "production": {
+    "username": "postgres",
+    "password": "Vrutti@123",
+    "database": "shop_managment",
+    "host": "127.0.0.1",
+    "dialect": "postgres"
+  }
+}
