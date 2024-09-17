@@ -34,9 +34,13 @@ module.exports = (sequelize, DataTypes) => {
                 allowNull: false,
             },
             Created_by: {
-               type: DataTypes.INTEGER,
-               allowNull: true,
-            },
+                type: DataTypes.INTEGER,
+                allowNull: false,
+                references: {
+                 model: 'Admins',
+                 key: 'id'
+             }
+             },
             role: {
                 type: DataTypes.ENUM(
                     "Customer",    

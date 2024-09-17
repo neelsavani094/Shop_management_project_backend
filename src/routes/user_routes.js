@@ -1,9 +1,9 @@
 const express = require('express');
-const { getAllUser, createUser} = require('../controllers/userController');
 const { profilePictureUpload } = require('../middlewares/multerMiddleware');
+const { loginUser, updateUser } = require('../controllers/userController');
 const router = express.Router();
 
-router.get('/getAll', getAllUser);
-router.post('/add', profilePictureUpload.single("profilePicture"),createUser);
+router.post('/login', loginUser);
+router.put('/update/:id', profilePictureUpload.single("profilePicture"), updateUser);
 
 module.exports = router;
